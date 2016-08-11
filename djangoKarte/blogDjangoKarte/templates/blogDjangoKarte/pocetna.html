@@ -3,9 +3,21 @@
         <title>Početna</title>
     </head>
     <body>
-        <h1>Blog DjangoKarte</h1>
-        <p>Ovo je početna stranica.</p>
-        <p>Ona radi!</p>
+    	<div>
+    		<h1><a href="/">Projekat DjangoKarte</a></h1>
+		</div>
+		<div>
+			<h2> Realizovane aplikacije </h2>
+		</div>
+	{% for clanak in clanci %}
+    <div>
+        <h1><a href="">{{ clanak.naslov }}</a></h1>
+        <p><b>{{ clanak.kratakOpis|linebreaksbr }}</b></p>
+        <p>{{ clanak.tekst|linebreaksbr }}</p>
+        <p>Objavljen: {{ clanak.datumObjave }}</p>
+    </div>
+	{% endfor %}
+        
     </body>
 </html>
 

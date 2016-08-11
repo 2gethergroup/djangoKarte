@@ -1,3 +1,5 @@
 from django.contrib import admin
-
-# Register your models here.
+from .models import Clanak #import kreiranog modela
+    
+# Dodavanje kreiranog modela u admin deo
+admin.site.register(Clanak) 
