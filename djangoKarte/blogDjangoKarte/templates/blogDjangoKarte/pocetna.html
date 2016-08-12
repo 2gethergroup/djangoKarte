@@ -1,24 +1,34 @@
-<html>
-    <head>
-        <title>Početna</title>
-    </head>
-    <body>
-    	<div>
-    		<h1><a href="/">Projekat DjangoKarte</a></h1>
-		</div>
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{%block naslov_strane%} Početna {{block.super}} {% endblock %}
+
+    
+    {% block jumbotron %}
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <h1 class="text-center">Projekat DjangoKarte</h1>
+            <p class= "text-justify">Projekat predstavlja rezultat smeinarskog rada <b>"Radni okvir za veb: Django i njegova primena u izradi GIS aplikacija"</b> iz predmeta GIS programiranje, Građevinskog fakulteta Univerziteta u Beogradu, odskea za gedeziju i geoinformatiku.</p>
+            <p class="text-center">
+            <a class="btn btn-lg btn-default" href="https://nempau.gitbooks.io/djangokartedoc/content/" role="button">DjangoKarteDoc &raquo;</a>
+            <a class="btn btn-lg btn-default" href="https://github.com/nempau/djangoKarte" role="button"> GitHub &raquo;</a>
+            </p>
+      </div>
+    {% endblock%}
+    {% block clanak%}
 		<div>
-			<h2> Realizovane aplikacije </h2>
+			<h2 class=" text-center" > Realizovane aplikacije </h2>
 		</div>
 	{% for clanak in clanci %}
     <div>
-        <h1><a href="">{{ clanak.naslov }}</a></h1>
-        <p><b>{{ clanak.kratakOpis|linebreaksbr }}</b></p>
-        <p>{{ clanak.tekst|linebreaksbr }}</p>
-        <p>Objavljen: {{ clanak.datumObjave }}</p>
+        <h1 class= "text-center"><a href="">{{ clanak.naslov }}</a></h1>
+        <p class= " text-center"><b>{{ clanak.kratakOpis|linebreaksbr }}</b></p>
+        <p class= "text-justify">{{ clanak.tekst|linebreaksbr }}</p>
+        <p>Objavljen: {{ clanak.datumObjave }}</p>  
     </div>
 	{% endfor %}
-        
-    </body>
-</html>
+    {% endblock %}  
+
 
 
