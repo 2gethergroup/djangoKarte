@@ -4,28 +4,42 @@
 
 {%block naslov_strane%} Početna {{block.super}} {% endblock %}
 
+<style>
+{% block stile%}
+.hr {
+    border-top: 2px solid #000;
+}
+.jumbotron {background-color: #ffd706;
+            color:#000 ;    
+}
+{% endblock%}
+</style>
     
     {% block jumbotron %}
         <!-- Main component for a primary marketing message or call to action -->
         <div class="jumbotron">
+        <div class="container">
             <h1 class="text-center">Projekat DjangoKarte</h1>
-            <p class= "text-justify">Projekat predstavlja rezultat smeinarskog rada <b>"Radni okvir za veb: Django i njegova primena u izradi GIS aplikacija"</b> iz predmeta GIS programiranje, Građevinskog fakulteta Univerziteta u Beogradu, odskea za gedeziju i geoinformatiku.</p>
+            <p class= "text-center">Projekat predstavlja rezultat smeinarskog rada <b>"Radni okvir za veb: Django i njegova primena u izradi GIS aplikacija"</b> iz predmeta GIS programiranje, Građevinskog fakulteta Univerziteta u Beogradu, odskea za gedeziju i geoinformatiku.</p>
             <p class="text-center">
-            <a class="btn btn-lg btn-default" href="https://nempau.gitbooks.io/djangokartedoc/content/" role="button">DjangoKarteDoc &raquo;</a>
-            <a class="btn btn-lg btn-default" href="https://github.com/nempau/djangoKarte" role="button"> GitHub &raquo;</a>
+            <a class="btn btn-lg btn-default" href="https://nempau.gitbooks.io/djangokartedoc/content/" role="button"><i class="fa fa-book fa-2x" aria-hidden="true"></i> DjangoKarteDoc &raquo;</a>
+            <a class="btn btn-lg btn-default" href="https://github.com/nempau/djangoKarte" role="button"> <i class="fa fa-github fa-2x" aria-hidden="true"></i>GitHub &raquo;</a>
             </p>
-      </div>
+        </div>
+        </div>
     {% endblock%}
     {% block clanak%}
 		<div>
 			<h2 class=" text-center" > Realizovane aplikacije </h2>
+            <br>
 		</div>
 	{% for clanak in clanci %}
     <div>
         <h1 class= "text-center"><a href="">{{ clanak.naslov }}</a></h1>
         <p class= " text-center"><b>{{ clanak.kratakOpis|linebreaksbr }}</b></p>
         <p class= "text-justify">{{ clanak.tekst|linebreaksbr }}</p>
-        <p>Objavljen: {{ clanak.datumObjave }}</p>  
+        <p>Objavljen: {{ clanak.datumObjave }}</p> 
+        <hr></hr>
     </div>
 	{% endfor %}
     {% endblock %}  

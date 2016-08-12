@@ -11,20 +11,24 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-
+    
     <title>{%block naslov_strane%} | DjangoKarte {% endblock %} </title>
 
     {% include 'head_css.html' %}
   </head>
-
+  <style type="text/css">
+    {% block stile%}
+    {% endblock %}
+  </style>
   <body>
 
     <!-- Fixed navbar -->
     {% include 'navbar.html' %}
 
-    <div class="container">
     {% block jumbotron%}
-    {% endblock %} 
+    {% endblock %}
+    <div class="container">
+     
 
     {% block clanak%}
     {% endblock %}
