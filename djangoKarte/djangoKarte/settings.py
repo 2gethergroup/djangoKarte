@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blogDjangoKarte',
+    #Dodato
+    'django.contrib.gis',
+    'svet',
 ]
 
 MIDDLEWARE_CLASSES = [
