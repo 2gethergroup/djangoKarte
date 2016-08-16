@@ -8,14 +8,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">DjangoKarte <i class="fa fa-globe fa-x3" aria-hidden="true"></i></a>
+          <a class="navbar-brand" href='/'>DjangoKarte <i class="fa fa-globe fa-x3" aria-hidden="true"></i></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Početna</a></li>
-            <li><a href="/stanice">Aplikacija stanice</a></li>
-            <li><a href="/kriminal">Aplikacija kriminal</a></li>
-            <li><a href="/parcele">Aplikacija parcele <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href='{% url "pocetna" %}'>Početna</a></li>
+            <li><a href='{% url "metStanice" %}'>Aplikacija MetStanice</a></li>
+            <li><a href='/'>Aplikacija Svet</a></li>
+            <li><a href="/">Aplikacija 3 <span class="sr-only">(current)</span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

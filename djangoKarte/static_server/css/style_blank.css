@@ -1,0 +1,14 @@
+/* CSS za mapy */
+
+html, body, #map{
+			height: 100%;
+			width: 100%;
+			font-family: 'Source Sans Pro', sans-serif; 
+
+}
+
+.infoHead {
+	font-family: 'Source Sans Pro', sans-serif; 
+	font-size: 18px;
+	position: center;
+}

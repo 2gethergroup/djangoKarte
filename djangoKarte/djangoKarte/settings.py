@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #Dodato
     'django.contrib.gis',
     'svet',
+    'metStanice',
 ]
 
 MIDDLEWARE_CLASSES = [
